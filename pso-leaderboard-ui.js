@@ -12,7 +12,7 @@ document
 })
 
 function updateLeaderBoard() {
-
+    MESSAGEBUS.postMessage("update leader board")
 }
 
 function updateLocalStorage(playerScoreFormData) {
@@ -39,7 +39,7 @@ function updateLocalStorage(playerScoreFormData) {
             [...getStorageItem("playerScores"), objectFrom(playerScoreFormData)]
         )
     }
-    // broadcastUpdateLeaderBoard()
+    // updateLeaderBoard()
 }
 
 
