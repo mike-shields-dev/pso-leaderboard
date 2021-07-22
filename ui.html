@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ui.css">
+
+    <title>PSO Scoreboard UI</title>
+</head>
+<body>
+    <form id="playerScoreForm" action="">
+        <label for="firstName">First Name: </label>
+        <input 
+            id="firstName" 
+            type="text" 
+            name="firstName"
+            required
+        />
+        <label for="initial">Initial: </label>
+        <input 
+            id="initial" 
+            name="initial"
+            type="text" 
+        />
+        <label for="score">Score: </label>
+        <input 
+            id="score" 
+            name="score"
+            type="number" 
+            required
+        />
+        <button type="submit">Save</button>
+    </form>
+
+    <button id='bttnClearStore'>Clear All Data</button>
+    <script src="ui-main.js" type="module"></script>
+</body>
+</html>
