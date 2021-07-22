@@ -4,7 +4,7 @@ const leaderBoardEl = document.querySelector("#leaderBoard")
 
 MESSAGEBUS.onmessage = mssg => {
     if(mssg === "update") {
-
+        console.log("update received")
     }
 }
     
