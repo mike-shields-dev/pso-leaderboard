@@ -1,6 +1,6 @@
 import updateStore from './modules/updateStore.mjs'
 import broadcastMessage from './modules/broadcastMessage.mjs'
-import updateScoreBoardDisplay from './modules/updateScoreBoardDisplay.mjs'
+import clearStore from './modules/clearStore.mjs'
 
 const form = document.querySelector("#playerScoreForm")
 
@@ -15,7 +15,8 @@ form.addEventListener("submit", event => {
 })
 
 const bttnClearStore = document.querySelector('#bttnClearStore')
+
 bttnClearStore.addEventListener('click', event => {
-    const store = window.localStorage.clear()
+    clearStore()
     broadcastMessage("store updated")
 })
