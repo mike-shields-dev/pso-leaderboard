@@ -1,11 +1,10 @@
 const MESSAGEBUS = new BroadcastChannel("MESSAGEBUS")
+const LOCALSTORE = window.localStorage
 const leaderBoardEl = document.querySelector("#leaderBoard")
 
 
 MESSAGEBUS.onmessage = mssg => {
-    if(mssg === "update") {
-        console.log("update received")
-    }
+    
 }
     
 

@@ -39,7 +39,7 @@ function updateLocalStorage(playerScoreFormData) {
             [...getStorageItem("playerScores"), objectFrom(playerScoreFormData)]
         )
     }
-    // updateLeaderBoard()
+    updateLeaderBoard()
 }
 
 
