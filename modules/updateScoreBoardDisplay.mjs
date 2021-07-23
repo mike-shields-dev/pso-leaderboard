@@ -9,13 +9,17 @@ const updateScoreBoardDisplay = () => {
     } else {
         displayEl.innerHTML = 
             playerScores
+                .sort((playerScoreA, playerScoreB) => 
+                    playerScoreB.score - playerScoreA.score
+                )
                 .map(playerScore => 
                     `<div>
                         <span>${playerScore.firstName}</span>
                         <span>${playerScore.initial}</span>
                         <span>${playerScore.score}</span>
                     </div>`
-                ).join('')
+                )
+                .join('')
     }
 }
 
