@@ -1,25 +1,31 @@
 import getStoreItem from "./getStoreItem.mjs"
+import scoreboardEntryTemplate from "./scoreboardEntryTemplate.mjs"
     
 const updateScoreBoardDisplay = () => {
+    const SCOREBOARDLENGTH = 10
     const playerScores = getStoreItem("playerScores")
-    const displayEl = document.querySelector('#display')
+    const scoreboard = document.querySelector('#scoreboard')
 
     if(!playerScores) {
-        displayEl.innerHTML = "" 
+        scoreboard.innerHTML = new Array(SCOREBOARDLENGTH).fill(null)
+        .map((_, i) => scoreboardEntryTemplate({index: i}))
+        .join('')
+        
     } else {
-        displayEl.innerHTML = 
-            playerScores
-                .sort((playerScoreA, playerScoreB) => 
-                    playerScoreB.score - playerScoreA.score
-                )
-                .map(playerScore => 
-                    `<div>
-                        <span>${playerScore.firstName}</span>
-                        <span>${playerScore.initial}</span>
-                        <span>${playerScore.score}</span>
-                    </div>`
-                )
-                .join('')
+        const emptyEntriesLength = 10 - playerScores.length 
+        const emptyEntriesArray = new Array(emptyEntriesLength).fill({})
+        
+        scoreboard.innerHTML = playerScores.concat(emptyEntriesArray)
+            .sort((playerA, playerB) => playerB.score - playerA.score)
+            .map((player, i) => 
+                scoreboardEntryTemplate({
+                    firstName: player.firstName, 
+                    initial: player.initial, 
+                    score: player.score, 
+                    index: i
+                })
+            )
+            .join('')
     }
 }
 
