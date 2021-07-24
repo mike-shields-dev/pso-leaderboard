@@ -41,20 +41,20 @@ h1 {
 form {
     display: grid;
     padding: 2rem;
-    grid-template-columns: 4fr 20fr;
     grid-template-areas: 
-        "firstNameLabel firstNameInput"
-        "initialLabel   initialInput"
-        "scoreLabel     scoreInput"
-        ".............. bttns"
+        "firstNameLabel firstNameLabel  firstNameLabel firstNameLabel"
+        "firstNameInput firstNameInput  firstNameInput firstNameInput"
+        "initialLabel   initialInput    scoreLabel     scoreInput"
+        "bttns            bttns          bttns          bttns"
     ;
     margin: 2rem auto;
     gap: 0.75rem;
 }
 
-label { 
+label {
     white-space: nowrap;
-    padding-right: 1rem; 
+    padding-right: 1rem;
+    text-align: center; 
 }
 
 input {
@@ -64,25 +64,25 @@ input {
 }
 
 #firstNameLabel { grid-area: firstNameLabel }
-#firstNameInput { grid-area: firstNameInput }
-#initialLabel { grid-area: initialLabel }
+#firstNameInput { 
+    grid-area: firstNameInput;
+}
 
+#initialLabel { grid-area: initialLabel }
 #initialInput { 
     grid-area: initialInput;
     width: 2rem;   
 }
 
 #scoreLabel { grid-area: scoreLabel }
-
 #scoreInput { 
-    grid-area: scoreInput;
-    width: 5rem;     
+    grid-area: scoreInput;    
 }
  
 #formBttns { 
     grid-area: bttns;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -93,6 +93,8 @@ button {
     font-weight: bold;
     color: #252525;
     font-size: 1.275rem;
+    min-width: 10rem;
+    margin: 0 auto;
 }
 
 button:hover { cursor: pointer }

@@ -63,7 +63,7 @@ h2 {
     font-size: 1rem;
     display: grid;
     gap: 0.6em;
-    grid-template-columns: 1fr 8fr 3fr;
+    grid-template-columns: 1fr 8fr 2fr;
     margin: 0.35em 2em;
     padding: 0;
 }
