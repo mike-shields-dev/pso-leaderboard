@@ -10,39 +10,27 @@
 </head>
 <body>
     <header>
-        <img src="./assets/images/nfmLogo.png" alt="">
-            <h1>Penalty Shootout Leaderboard</h1>    
-</header>
+        <img src="./assets/images/nfmLogo.png" alt="nfm logo">
+        <h1>Penalty Shootout Leaderboard</h1>    
+    </header>
 
     <form id="playerScoreForm" action="">
-        <label id="labelFirstName" for="inputFirstName">First Names Only: </label>
-        <input 
-            id="inputFirstName" 
-            type="text" 
-            name="firstName"
-            required
-        />
-        <label id="labelInitial" for="inputInitial">Surname Initial: </label>
-        <input 
-            id="inputInitial" 
-            name="initial"
-            type="text" 
-            maxlength="1"
-        />
-        <label id="labelScore" for="inputScore">Score: </label>
-        <input 
-            id="inputScore" 
-            name="score"
-            type="number"
-            min="0"
-            max="9999" 
-            required
-        />
+
+        <label id="firstNameLabel" for="firstNameInput">First Names Only: </label>
+        <input id="firstNameInput" name="firstName" type="text" required/>
+        
+        <label id="initialLabel" for="initialInput">Surname Initial: </label>
+        <input id="initialInput" name="initial" type="text" maxlength="1"/>
+
+        <label id="scoreLabel" for="scoreInput">Score: </label>
+        <input id="scoreInput" name="score" type="number" min="0" max="9999" required/>
+
         <div id="formBttns">
-            <button id="bttnSave" type="submit">Save</button>
-            <button id="bttnUndo">Undo</button>
-            <button id='bttnDeleteAll'>Delete All</button>
+            <button id="saveBttn" type="submit">Save</button>
+            <button id="undoBttn">Undo</button>
+            <button id='deleteAllBttn'>Delete All</button>
         </div>
+
     </form>
 
     <script src="ui-main.js" type="module"></script>

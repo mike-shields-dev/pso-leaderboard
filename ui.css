@@ -1,5 +1,6 @@
 body {
-    padding: 2rem;
+    padding: 0;
+    margin: 0;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -11,30 +12,43 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    width: 100vw;
+    padding-top: 2rem;
 }
 
 img {
-    width: 6rem;
+    width: 8rem;
+    animation: rotate;
+    animation-duration: 60s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
 }
 
 h1 { 
     text-align: center;
     font-size: 3rem;
-    padding-left: 2rem; 
+    padding: 0 2rem;
 }
 
 form {
     display: grid;
+    padding: 2rem;
     grid-template-columns: 4fr 20fr;
     grid-template-areas: 
-        "labelFirstName inputFirstName"
-        "labelInitial   initialInput"
-        "labelScore     inputScore"
+        "firstNameLabel firstNameInput"
+        "initialLabel   initialInput"
+        "scoreLabel     scoreInput"
         ".............. bttns"
     ;
-    margin: 3rem auto;
+    margin: 2rem auto;
     gap: 0.75rem;
 }
 
@@ -46,21 +60,22 @@ label {
 input {
     font-size: 1.25rem;
     padding: 0.25rem;
+    background: #efefef;
 }
 
-#labelFirstName { grid-area: labelFirstName }
-#inputFirstName { grid-area: inputFirstName }
-#labelInitial { grid-area: labelInitial }
+#firstNameLabel { grid-area: firstNameLabel }
+#firstNameInput { grid-area: firstNameInput }
+#initialLabel { grid-area: initialLabel }
 
-#inputInitial { 
+#initialInput { 
     grid-area: initialInput;
     width: 2rem;   
 }
 
-#labelScore { grid-area: labelScore }
+#scoreLabel { grid-area: scoreLabel }
 
-#inputScore { 
-    grid-area: inputScore;
+#scoreInput { 
+    grid-area: scoreInput;
     width: 5rem;     
 }
  
@@ -68,7 +83,7 @@ input {
     grid-area: bttns;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 button {
@@ -82,9 +97,9 @@ button {
 
 button:hover { cursor: pointer }
 
-#bttnSave { background: #0f0 }
-#bttnUndo { background: #f80 }
-#bttnDeleteAll { background: #f00 }
+#saveBttn { background: #0f0 }
+#undoBttn { background: #f80 }
+#deleteAllBttn { background: #f00 }
 
 
 

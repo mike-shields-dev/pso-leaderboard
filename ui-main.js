@@ -15,28 +15,28 @@ form.addEventListener("submit", event => {
     broadcastMessage("store updated")
     form.reset()
 
-    const inputFirstName = document.querySelector('#inputFirstName') 
-    inputFirstName.focus();
+    const firstNameInput = document.querySelector('#firstNameInput') 
+    firstNameInput.focus();
 })
 
 const textInputs = document.querySelectorAll('[type=text]')
 
 textInputs.forEach(textInput => 
     textInput
-        .addEventListener("keyup", function({target: {value}}) { 
+        .addEventListener("keyup", function() { 
             this.value = capitalizeWords(this.value)
         })
 )
 
 
-const bttnDeleteAll = document.querySelector('#bttnDeleteAll')
-bttnDeleteAll.addEventListener('click', event => {
+const deleteAllBttn = document.querySelector('#deleteAllBttn')
+deleteAllBttn.addEventListener('click', event => {
     clearStore()
     broadcastMessage("store updated")
 })
 
-const bttnUndo = document.querySelector('#bttnUndo')
-bttnUndo.addEventListener('click', event => {
+const undoBttn = document.querySelector('#undoBttn')
+undoBttn.addEventListener('click', event => {
     deleteLastEntry()
     broadcastMessage("store updated")
 })
