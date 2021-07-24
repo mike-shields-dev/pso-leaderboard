@@ -8,6 +8,10 @@ body {
     font-family: sans-serif;
     color: #eee;
     background: #09006f;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 header {
@@ -21,15 +25,6 @@ header {
 
 img {
     width: 8rem;
-    animation: rotate;
-    animation-duration: 60s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-@keyframes rotate {
-    from { transform: rotate(0deg) }
-    to { transform: rotate(360deg) }
 }
 
 h1 { 
@@ -42,8 +37,7 @@ form {
     display: grid;
     padding: 2rem;
     grid-template-areas: 
-        "firstNameLabel firstNameLabel  firstNameLabel firstNameLabel"
-        "firstNameInput firstNameInput  firstNameInput firstNameInput"
+        "firstNameLabel firstNameInput  firstNameInput firstNameInput"
         "initialLabel   initialInput    scoreLabel     scoreInput"
         "bttns            bttns          bttns          bttns"
     ;
@@ -54,13 +48,23 @@ form {
 label {
     white-space: nowrap;
     padding-right: 1rem;
-    text-align: center; 
+}
+
+label:focus {
+    outline: none;
 }
 
 input {
     font-size: 1.25rem;
     padding: 0.25rem;
     background: #efefef;
+    border: none;
+    border-radius: 0.15rem;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0px 2px magenta;
 }
 
 #firstNameLabel { grid-area: firstNameLabel }
@@ -97,7 +101,10 @@ button {
     margin: 0 auto;
 }
 
-button:hover { cursor: pointer }
+button:hover { 
+    cursor: pointer;
+    box-shadow: 0 0 0px 2px magenta;
+}
 
 #saveBttn { background: #0f0 }
 #undoBttn { background: #f80 }
