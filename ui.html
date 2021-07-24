@@ -9,33 +9,38 @@
     <title>PSO Scoreboard UI</title>
 </head>
 <body>
+    <h1>Penalty Shootout</h1>
     <form id="playerScoreForm" action="">
-        <label for="firstName">First Name: </label>
+        <label id="labelFirstName" for="inputFirstName">First Names Only: </label>
         <input 
-            id="firstName" 
+            id="inputFirstName" 
             type="text" 
             name="firstName"
             required
         />
-        <label for="initial">Initial: </label>
+        <label id="labelInitial" for="inputInitial">Surname Initial: </label>
         <input 
-            id="initial" 
+            id="inputInitial" 
             name="initial"
             type="text" 
             maxlength="1"
         />
-        <label for="score">Score: </label>
+        <label id="labelScore" for="inputScore">Score: </label>
         <input 
-            id="score" 
+            id="inputScore" 
             name="score"
-            type="number" 
+            type="number"
+            min="0"
+            max="9999" 
             required
         />
-        <button type="submit">Save</button>
+        <div id="formBttns">
+            <button id="bttnSave" type="submit">Save</button>
+            <button id="bttnUndo">Undo</button>
+            <button id='bttnDeleteAll'>Delete All</button>
+        </div>
     </form>
 
-    <button id='bttnClearStore'>Clear All Data</button>
-    <button id="bttnDeleteLastEntry">Undo</button>
     <script src="ui-main.js" type="module"></script>
 </body>
 </html>
