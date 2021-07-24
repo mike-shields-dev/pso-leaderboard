@@ -1,6 +1,6 @@
 import updateStore from './modules/updateStore.mjs'
 import deleteLastEntry from './modules/deleteLastEntry.mjs'
-import broadcastMessage from './modules/broadcastMessage.mjs'
+import broadcastMessageOnChannel from './modules/broadcastMessageOnChannel.mjs'
 import clearStore from './modules/clearStore.mjs'
 import capitalizeWords from './modules/capitalizeWords.mjs'
 
@@ -12,7 +12,7 @@ form.addEventListener("submit", event => {
     const playerScoreFormData = new FormData(playerScoreForm)
 
     updateStore(playerScoreFormData)
-    broadcastMessage("store updated")
+    broadcastMessageOnChannel("store updated", "ui&display")
     form.reset()
 
     const firstNameInput = document.querySelector('#firstNameInput') 
@@ -38,5 +38,5 @@ deleteAllBttn.addEventListener('click', event => {
 const undoBttn = document.querySelector('#undoBttn')
 undoBttn.addEventListener('click', event => {
     deleteLastEntry()
-    broadcastMessage("store updated")
+    broadcastMessageOnChannel("store updated")
 })

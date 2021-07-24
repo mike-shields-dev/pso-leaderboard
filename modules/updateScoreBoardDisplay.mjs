@@ -1,5 +1,5 @@
 import getStoreItem from "./getStoreItem.mjs"
-import scoreboardEntryTemplate from "./scoreboardEntryTemplate.mjs"
+import scoreboardRowTemplate from "./scoreboardRowTemplate.mjs"
     
 const updateScoreBoardDisplay = () => {
     const scoreboardEl = document.querySelector('#scoreboard')
@@ -9,7 +9,7 @@ const updateScoreBoardDisplay = () => {
     
     if(!oldPlayerScores || !oldPlayerScores.length) {
         scoreboardEl.innerHTML = newPlayerScores
-        .map((_, i) => scoreboardEntryTemplate({index: i}))
+        .map((_, i) => scoreboardRowTemplate({index: i}))
         .join('')
     } else {  
         
@@ -23,7 +23,7 @@ const updateScoreBoardDisplay = () => {
 
         scoreboardEl.innerHTML = newPlayerScores
             .map((player, i) => 
-                scoreboardEntryTemplate({
+                scoreboardRowTemplate({
                     firstName: player.firstName, 
                     initial: player.initial, 
                     score: player.score, 
