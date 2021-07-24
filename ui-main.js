@@ -4,6 +4,7 @@ import broadcastMessage from './modules/broadcastMessage.mjs'
 import clearStore from './modules/clearStore.mjs'
 
 const form = document.querySelector("#playerScoreForm")
+const inputFirstName = document.querySelector('#firstName') 
 
 form.addEventListener("submit", event => {
     event.preventDefault()
@@ -13,8 +14,9 @@ form.addEventListener("submit", event => {
     updateStore(playerScoreFormData)
     broadcastMessage("store updated")
     form.reset()
+    
+    firstName.focus();
 })
-
 
 const bttnClearStore = document.querySelector('#bttnClearStore')
 bttnClearStore.addEventListener('click', event => {
