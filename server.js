@@ -14,7 +14,7 @@ createServer(function(req, res){
         ext === "png" ? "image/png" : 
         ext === "ico" ? "image/x-icon" : "text"
 
-    console.log(ext, ": ", mimeType)
+
         fs.readFile(`public${pathname}`, function (err, html) {
             if (err) {
                 throw err
