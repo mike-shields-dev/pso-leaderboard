@@ -19,7 +19,7 @@
 }
 
 html {
-    font-size: 4vh; 
+    font-size: 16px; 
     box-sizing: border-box;
 }
 
@@ -33,64 +33,68 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     background-size: cover;
+    /* border: 1px solid orange; */
 }
 
 h1 {
-    font-size: 2.75rem;
+    font-size: 8rem;
     text-align: center;
-    /* border: 1px solid red; */
-    margin: 0 1rem;
-    padding-top: 1rem;
+    padding-top: 0.3rem;
+    margin: 0 auto;
     line-height: 0.85;
     text-shadow: 4px 4px #000000;
+    /* border: 1px solid red; */
 }
 
 h2 {
-    font-size: 2rem;
-    margin-top: 0;
+    font-size: 6rem;
+    margin: 0 auto;
+    padding-bottom: 1.725rem;
     text-align: center;
-    /* border: 1px solid magenta; */
     text-shadow: 4px 4px #000000;
-    margin-bottom: 0.5em;
+    /* border: 1px solid magenta; */
 }
+
 #scoreboard {
+    display: grid;
+    font-size: 3rem;
     color: #000;
-    padding: 0;
-    margin: 0;
+    margin: 0 5%;
+    gap: 0.5em;
+    /* border: 1px solid magenta; */
 }
 
 .scoreboardRow {
-    font-size: 1rem;
     display: grid;
-    gap: 0.6em;
-    grid-template-columns: 1fr 8fr 3fr;
-    margin: 0.35em 2em;
-    padding: 0;
+    gap: 0.25em;
+    grid-template-columns: 1fr 10fr 2.5fr 4fr;
+    /* border: 1px solid red; */
 }
 
 .bullet {
-    margin: 0.05rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1rem;
-    height: 1rem;
-    font-size: 0.7rem;
+    width: 1.5em;
+    height: 1.5em;
     border: 1px solid black;
     border-radius: 2em;
     background: #fff;
+    box-shadow: 2px 2px #000;
 }
 
-.entryField {
-    font-size: 0.8rem;
-    height: 100%;
-    background: #fff;
-    padding: 0;
-    padding-left: 0.25em;
+.entryField { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff; 
+    border-radius: 0.075em;
 }
 
-.score {
+.score, 
+.speed {
     text-align: center;
 }
+/* .speed { width: 3rem } */
 
 

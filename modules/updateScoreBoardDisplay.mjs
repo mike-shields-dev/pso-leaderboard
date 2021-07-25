@@ -14,7 +14,12 @@ const updateScoreBoardDisplay = () => {
     } else {  
         
         oldPlayerScores
-            .sort((playerA, playerB) => playerB.score - playerA.score)
+            .sort((playerA, playerB) => {
+                if(playerA.score === playerB.score) {
+                    return playerB.speed - playerA.speed
+                }
+                return playerB.score - playerA.score
+            })
             .slice(0, 11)
             .forEach((player, i) => 
                 i < newPlayerScores.length && 
@@ -26,7 +31,8 @@ const updateScoreBoardDisplay = () => {
                 scoreboardRowTemplate({
                     firstName: player.firstName, 
                     initial: player.initial, 
-                    score: player.score, 
+                    score: player.score,
+                    speed: player.speed, 
                     index: i
                 })
             )

@@ -32,11 +32,11 @@ textInputs.forEach(textInput =>
 const deleteAllBttn = document.querySelector('#deleteAllBttn')
 deleteAllBttn.addEventListener('click', event => {
     clearStore()
-    broadcastMessage("store updated")
+    broadcastMessageOnChannel("store updated", "ui&display")
 })
 
 const undoBttn = document.querySelector('#undoBttn')
 undoBttn.addEventListener('click', event => {
     deleteLastEntry()
-    broadcastMessageOnChannel("store updated")
+    broadcastMessageOnChannel("store updated", "ui&display")
 })

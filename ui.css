@@ -37,9 +37,11 @@ form {
     display: grid;
     padding: 2rem;
     grid-template-areas: 
-        "firstNameLabel firstNameInput  firstNameInput firstNameInput"
-        "initialLabel   initialInput    scoreLabel     scoreInput"
-        "bttns            bttns          bttns          bttns"
+        "firstNameLabel firstNameInput"  
+        "initialLabel   initialInput"    
+        "scoreLabel     scoreInput"
+        "speedLabel     speedInput"
+        "bttns          bttns"
     ;
     margin: 2rem auto;
     gap: 0.75rem;
@@ -80,7 +82,14 @@ input:focus {
 
 #scoreLabel { grid-area: scoreLabel }
 #scoreInput { 
-    grid-area: scoreInput;    
+    grid-area: scoreInput;
+    width: 4rem;    
+}
+
+#speedLabel { grid-area: speedLabel }
+#speedInput { 
+    grid-area: speedInput;
+    width: 3rem; 
 }
  
 #formBttns { 
