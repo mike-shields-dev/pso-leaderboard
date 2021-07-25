@@ -2,7 +2,7 @@ import updateStore from './modules/updateStore.mjs'
 import deleteLastEntry from './modules/deleteLastEntry.mjs'
 import broadcastMessageOnChannel from './modules/broadcastMessageOnChannel.mjs'
 import clearStore from './modules/clearStore.mjs'
-import capitalizeWords from './modules/capitalizeWords.mjs'
+import capitalizeEachWord from './modules/capitalizeWords.mjs'
 
 const form = document.querySelector("#playerScoreForm")
 
@@ -24,7 +24,7 @@ const textInputs = document.querySelectorAll('[type=text]')
 textInputs.forEach(textInput => 
     textInput
         .addEventListener("keyup", function() { 
-            this.value = capitalizeWords(this.value)
+            this.value = capitalizeEachWord(this.value)
         })
 )
 

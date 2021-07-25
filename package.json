@@ -1,0 +1,24 @@
+{
+  "name": "pso-leaderboard",
+  "version": "1.0.0",
+  "description": "penalty shootout leaderboard",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfmdevelopers/pso-leaderboard.git"
+  },
+  "author": "Michael Shields",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nfmdevelopers/pso-leaderboard/issues"
+  },
+  "homepage": "https://github.com/nfmdevelopers/pso-leaderboard#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
