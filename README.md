@@ -35,4 +35,6 @@ This may prove to be inadequate later on though, as the data is not completely i
 
 ### Broadcast Channel API
 \
+In order to update the leaderboard display, some kind of data update notification event was needed. At first I thought about using websockets but after some research I came across the Broadcast Channel API.
 
+This API (like the Local Storage API) allows data to be passed between both browser tabs & instances via "broadcast channels" where data can be sent and recieved as part of message object. 
