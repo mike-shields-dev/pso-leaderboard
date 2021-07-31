@@ -1,6 +1,4 @@
-const getStoreItem = key => {
-    const STORE = window.localStorage
-    return JSON.parse(STORE.getItem(key))
-}
+const getStoreItem = key =>
+    JSON.parse(window.localStorage.getItem(key))
 
 export default getStoreItem

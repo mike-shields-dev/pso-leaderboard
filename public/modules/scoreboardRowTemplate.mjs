@@ -1,9 +1,9 @@
 const scoreboardRowTemplate = ({
+    index,
     firstName = "", 
     initial = "", 
     score = "",
     speed = "",
-    index
 }) => `
     <div class="scoreboardRow">
         <div class="bullet">${index + 1}</div>

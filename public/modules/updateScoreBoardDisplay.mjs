@@ -12,28 +12,23 @@ const updateScoreBoardDisplay = () => {
         .map((_, i) => scoreboardRowTemplate({index: i}))
         .join('')
     } else {  
-        
         oldPlayerScores
-            .sort((playerA, playerB) => {
-                if(playerA.score === playerB.score) {
-                    return playerB.speed - playerA.speed
-                }
-                return playerB.score - playerA.score
-            })
-            .slice(0, 11)
-            .forEach((player, i) => 
-                i < newPlayerScores.length && 
-                (newPlayerScores[i] = player)
+            .sort((playerA, playerB) => 
+                playerA.score === playerB.score ?
+                    playerB.speed - playerA.speed :   
+                    playerB.score - playerA.score
             )
+            .slice(0, 10)
+            .forEach((player, i) => newPlayerScores[i] = player)
 
         scoreboardEl.innerHTML = newPlayerScores
             .map((player, i) => 
                 scoreboardRowTemplate({
+                    index: i,
                     firstName: player.firstName, 
                     initial: player.initial, 
                     score: player.score,
                     speed: player.speed, 
-                    index: i
                 })
             )
             .join('')
