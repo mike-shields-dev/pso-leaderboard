@@ -2,36 +2,38 @@ import updateStore from './modules/updateStore.mjs'
 import deleteLastEntry from './modules/deleteLastEntry.mjs'
 import clearStore from './modules/clearStore.mjs'
 import capitalizeEachWord from './modules/capitalizeWords.mjs'
+import appendCountryOptions from './modules/appendCountryOptions.mjs'
 
-const form = document.querySelector("#playerScoreForm")
+window.addEventListener("load", appendCountryOptions)
 
-form.addEventListener("submit", event => {
-    event.preventDefault()
-    const playerScoreForm = event.target
-    const playerScoreFormData = new FormData(playerScoreForm)
+document
+    .querySelector("form")
+    .addEventListener("submit", event => {
+        event.preventDefault()
+        const form = event.target
+        
+        const formData = new FormData(form)        
+        updateStore(formData)
+        
+        form.reset()
+        
+        const firstInput = document.querySelector('form input')
+        firstInput.focus();        
+    })
 
-    updateStore(playerScoreFormData)    
-    
-    const firstInputField = document.querySelector('#playerScoreForm input')
-    firstInputField.focus();
-    form.reset()
-})
-
-const textInputs = document.querySelectorAll('[type=text]')
-
-textInputs.forEach(textInput => 
-    textInput
-        .addEventListener("keyup", function() { 
-            this.value = capitalizeEachWord(this.value)
+document
+    .querySelectorAll('[type=text]')
+    .forEach(textInput =>
+        textInput
+            .addEventListener("keyup", function () {
+                this.value = capitalizeEachWord(this.value)
         })
-)
+    )
 
-const deleteAllBttn = document.querySelector('#deleteAllBttn')
-deleteAllBttn.addEventListener('click', event => {
-    clearStore()
-})
+document
+    .querySelector('#deleteAllBttn')
+    .addEventListener('click', clearStore)
 
-const undoBttn = document.querySelector('#undoBttn')
-undoBttn.addEventListener('click', event => {
-    deleteLastEntry()
-})
+document
+    .querySelector('#undoBttn')
+    .addEventListener('click', deleteLastEntry)

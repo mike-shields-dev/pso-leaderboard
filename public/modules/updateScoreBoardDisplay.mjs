@@ -21,6 +21,8 @@ const updateScoreBoardDisplay = () => {
             .slice(0, 10)
             .forEach((player, i) => newPlayerScores[i] = player)
 
+            console.log(newPlayerScores)
+
         scoreboardEl.innerHTML = newPlayerScores
             .map((player, i) => 
                 scoreboardRowTemplate({
@@ -28,7 +30,8 @@ const updateScoreBoardDisplay = () => {
                     firstName: player.firstName, 
                     initial: player.initial, 
                     score: player.score,
-                    speed: player.speed, 
+                    speed: player.speed,
+                    countryName: player.countryName
                 })
             )
             .join('')
