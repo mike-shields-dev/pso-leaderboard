@@ -1,11 +1,11 @@
 :root {
-    --angle: 15deg;
-    --negativeSkew: calc(var(--angle) * 1);
-    --positiveSkew: calc(var(--angle) * -1);
+    --skewAmount: 15deg;
+    --positiveSkew: calc(var(--skewAmount) * -1);
+    --negativeSkew: calc(var(--skewAmount) * 1);
 }
 
 html {
-    font-size: 16px; 
+    font-size: 5px; 
     box-sizing: border-box;
 }
 
@@ -18,7 +18,6 @@ body {
     background: rgb(4, 12, 22);
     height: 100vh;
     background-size: cover;
-    /* border: 1px solid orange; */
 }
 
 h1 {
@@ -28,7 +27,6 @@ h1 {
     margin: 0 auto;
     line-height: 0.85;
     text-shadow: 4px 4px #000000;
-    /* border: 1px solid red; */
 }
 
 h2 {
@@ -37,7 +35,6 @@ h2 {
     padding-bottom: 3.5rem;
     text-align: center;
     text-shadow: 4px 4px #000000;
-    /* border: 1px solid magenta; */
 }
 
 #scoreboard {
@@ -58,11 +55,10 @@ h2 {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 23fr;
     width: 90vw;
-    /* border: 1px solid green; */
 }
 
 .scoreboardBanner {
-    color: white;
+    color: rgb(202, 202, 202);
     height: 4rem;
     display: grid;
     padding: 1rem 4rem;
@@ -71,7 +67,7 @@ h2 {
     background: rgb(0, 27, 63);
     transform: skew(var(--positiveSkew));
     border-radius: 0.75rem;
-    box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.089);
+    border: 1px solid rgba(105, 158, 255, 0.212);
 }
 
 .rank {

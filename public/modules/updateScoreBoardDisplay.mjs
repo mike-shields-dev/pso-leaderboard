@@ -2,28 +2,28 @@ import getStoreItem from "./getStoreItem.mjs"
 import scoreboardRowTemplate from "./scoreboardRowTemplate.mjs"
     
 const updateScoreBoardDisplay = () => {
-    const scoreboardEl = document.querySelector('#scoreboard')
+    const scoresEl = document.querySelector('#scores')
     const SCOREBOARDLENGTH = 10
-    const oldPlayerScores = getStoreItem("playerScores")
-    const newPlayerScores = new Array(SCOREBOARDLENGTH).fill({})
+    const currentScores = getStoreItem("playerScores")
+    const newScores = new Array(SCOREBOARDLENGTH).fill({})
     
-    if(!oldPlayerScores || !oldPlayerScores.length) {
-        scoreboardEl.innerHTML = newPlayerScores
-        .map((_, i) => scoreboardRowTemplate({index: i}))
-        .join('')
+    if(!currentScores || !currentScores.length) {
+        scoresEl.innerHTML = 
+        newScores
+            .map((_, i) => scoreboardRowTemplate({index: i})).join('')
     } else {  
-        oldPlayerScores
-            .sort((playerA, playerB) => 
-                playerA.score === playerB.score ?
-                    playerB.speed - playerA.speed :   
-                    playerB.score - playerA.score
+        currentScores
+            .sort((scoreX, scoreY) => 
+                scoreX.score === scoreY.score ?
+                    scoreY.speed - scoreX.speed :   
+                    scoreY.score - scoreX.score
             )
             .slice(0, 10)
-            .forEach((player, i) => newPlayerScores[i] = player)
+            .forEach((player, i) => newScores[i] = player)
 
-            console.log(newPlayerScores)
+            console.log(newScores)
 
-        scoreboardEl.innerHTML = newPlayerScores
+        scoresEl.innerHTML = newScores
             .map((player, i) => 
                 scoreboardRowTemplate({
                     index: i,

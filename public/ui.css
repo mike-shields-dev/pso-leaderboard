@@ -4,13 +4,8 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
-    font-family: sans-serif;
-    color: #eee;
-    background: #09006f;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    color: rgb(209, 209, 209);
+    background: rgb(4, 12, 22);
     user-select: none;
 }
 
@@ -40,83 +35,75 @@ h1 {
 
 form {
     display: grid;
-    margin-top: 0;
-    padding: 0;
-    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    padding: 1rem;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
-        "firstNameLabel      firstNameInput"  
-        "initialLabel        initialInput"    
-        "scoreLabel          scoreInput"
-        "speedLabel          speedInput"
-        "countrySelectLabel  countrySelect"
-        "bttns               bttns"
+        "firstNameLabel firstNameInput firstNameInput firstNameInput firstNameInput"  
+        "initialLabel   initialInput   initialInput   initialInput   initialInput"    
+        "countryLabel   countrySelect  countrySelect  countrySelect  countrySelect"
+        "pointsLabel    pointsInput    pointsInput    pointsInput    pointsInput"
+        "speedLabel     speedInput     speedInput     speedInput     speedInput"
+        ".....          bttns          bttns          bttns          bttns"
     ;
-    margin: 2rem auto;
     gap: 0.75rem;
 }
 
 label {
     white-space: nowrap;
+    font-size: 1rem;
 }
 
 label:focus {
     outline: none;
 }
 
-input {
-    font-size: 1.25rem;
-    padding: 0.25rem;
-    background: #efefef;
+input, 
+select {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    background: #e6e6e6;
     border: none;
     border-radius: 0.15rem;
 }
 
-input:focus {
+input:focus,
+select:focus {
     outline: none;
     box-shadow: 0 0 0px 2px magenta;
 }
 
-#firstNameLabel { grid-area: firstNameLabel }
-#firstNameInput { 
-    grid-area: firstNameInput;
-}
+.firstNameLabel { grid-area: firstNameLabel }
+#firstNameInput { grid-area: firstNameInput }
 
-#initialLabel { grid-area: initialLabel }
-#initialInput { 
-    grid-area: initialInput;
-    width: 1rem;   
-}
+.initialLabel { grid-area: initialLabel }
+#initialInput { grid-area: initialInput }
 
-#scoreLabel { grid-area: scoreLabel }
-#scoreInput { 
-    grid-area: scoreInput;
-    width: 4rem;    
-}
+.countryLabel { grid-area: countryLabel }
+#countrySelect { grid-area: countrySelect }
 
-#speedLabel { grid-area: speedLabel }
-#speedInput { 
-    grid-area: speedInput;
-    width: 2.5rem; 
-}
+.pointsLabel { grid-area: pointsLabel }
+#pointsInput { grid-area: pointsInput }    
+
+.speedLabel { grid-area: speedLabel }
+#speedInput { grid-area: speedInput }
  
-#formBttns { 
+.bttns { 
     grid-area: bttns;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
-    gap: 1.5rem;
 }
 
 button {
     border: none;
     border-radius: 0.33rem;
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-weight: bold;
+    font-size: 1.25rem;
     color: #252525;
-    font-size: 1.275rem;
-    min-width: 10rem;
-    margin: 0 auto;
+    min-width: 33%;
 }
 
 button:hover { 
@@ -127,6 +114,3 @@ button:hover {
 #saveBttn { background: #0f0 }
 #undoBttn { background: #f80 }
 #deleteAllBttn { background: #f00 }
-
-
-
