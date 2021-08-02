@@ -1,23 +1,6 @@
-:root {
-    --skewAmount: 15deg;
-    --positiveSkew: calc(var(--skewAmount) * -1);
-    --negativeSkew: calc(var(--skewAmount) * 1);
-}
-
 html {
     font-size: 5px; 
     box-sizing: border-box;
-}
-
-body {
-    font-family: "Play";
-    overflow: hidden;
-    color: #fff;
-    padding: 0;
-    margin: 0;
-    background: rgb(4, 12, 22);
-    height: 100vh;
-    background-size: cover;
 }
 
 h1 {
@@ -41,12 +24,12 @@ h2 {
     display: grid;
     font-size: 3rem;
     color: #000;
-    margin: 0 5%;
+    margin: 0 auto;
     gap: 0.5em;
-    /* border: 1px solid magenta; */
+    border: 5px solid magenta;
 }
 
-.scoreBoardRow {
+.scoreboardRow {
     color: orange;
     height: 6rem;
     padding: 0rem;

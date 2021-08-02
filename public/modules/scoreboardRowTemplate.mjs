@@ -10,7 +10,7 @@ const scoreboardRowTemplate = ({
 }) => {
     const foundCountry = countriesData.find(country => country.name === countryName)
     return `
-        <div class="scoreBoardRow">
+        <div class="scoreboardRow">
             <div class="rank">${index + 1}</div>
             <div class="scoreboardBanner ${(index % 2) ? `odd` : `even`}">
                 <div class="flagContainer">
