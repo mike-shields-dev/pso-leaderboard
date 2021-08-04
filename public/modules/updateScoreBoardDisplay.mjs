@@ -2,13 +2,13 @@ import getStoreItem from "./getStoreItem.mjs"
 import scoreboardRowTemplate from "./scoreboardRowTemplate.mjs"
     
 const updateScoreBoardDisplay = () => {
-    const scoresEl = document.querySelector('#scores')
-    const SCOREBOARDLENGTH = 10
+    const scoreboardEl = document.querySelector('.scoreboard')
+    const SCORES_LENGTH = 10
     const currentScores = getStoreItem("playerScores")
-    const newScores = new Array(SCOREBOARDLENGTH).fill({})
+    const newScores = new Array(SCORES_LENGTH).fill({})
     
     if(!currentScores || !currentScores.length) {
-        scoresEl.innerHTML = 
+        scoreboardEl.innerHTML += 
         newScores
             .map((_, i) => scoreboardRowTemplate({index: i})).join('')
     } else {  
@@ -23,13 +23,13 @@ const updateScoreBoardDisplay = () => {
 
             console.log(newScores)
 
-        scoresEl.innerHTML = newScores
+        scoreboardEl.innerHTML += newScores
             .map((player, i) => 
                 scoreboardRowTemplate({
                     index: i,
                     firstName: player.firstName, 
                     initial: player.initial, 
-                    score: player.score,
+                    points: player.points,
                     speed: player.speed,
                     countryName: player.countryName
                 })
