@@ -1,33 +1,38 @@
 :root {
     --scoreboard-template-areas: "rank country name points speed ..";
-    --scoreboard-template-columns: 4fr 6fr 20fr 8fr 4fr 4fr;
+    --scoreboard-template-columns: 3fr 6fr 20fr 6fr 6fr 3fr;
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 6rem;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 1rem;
     margin: 0 auto;
-    line-height: 0.85;
+    line-height: 0.95;
 }
 
 h2 {
-    font-size: 6rem;
+    font-size: 4rem;
     margin: 0 auto;
-    padding-bottom: 3.5rem;
+    padding-bottom: 1rem;
     text-align: center;
 }
 
 .scoreboard {
     display: grid;
-    gap: 0.5rem;
+    gap: .6rem;
     font-size: 2rem;
     margin: 0 auto;
-    width: 90vw;
+    width: 95vw;
+    background: rgba(0, 0, 0, 0.175);
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .scoreboardHeader {
     display: grid;
+    font-size: 1.5rem;
     grid-template-areas: var(--scoreboard-template-areas);
     grid-template-columns: var(--scoreboard-template-columns);
 }
@@ -35,31 +40,22 @@ h2 {
 .scoreboardHeaderRankLabel {
     grid-area: rank;
     color: orange;
-    display: grid;
-    place-items: center;
 }
 
 .scoreboardHeaderCountryLabel {
     grid-area: country;
-    display: grid;
-    place-items: center;
 }
 
 .scoreboardHeaderNameLabel { 
     grid-area: name;
-    display: grid;
-    place-items: center;  
 }
 
 .scoreboardHeaderPointsLabel { 
     grid-area: points;
-    display: grid;
-    place-items: center; 
 }
+
 .scoreboardHeaderSpeedLabel { 
     grid-area: speed; 
-    display: grid;
-    place-items: center; 
 }
 
 .scoreboardRow {
@@ -71,7 +67,6 @@ h2 {
 }
 
 .scoreboardRowBanner {
-    z-index: -1;
     grid-area: country / country / country / speed;
     
     transform: skew(var(--positiveSkew));
@@ -87,40 +82,45 @@ h2 {
     background:rgba(23, 15, 49, 0.5);
 }
 
-.bannerItem {
+.centerAlign {
     display: grid;
     place-items: center; 
 }
+
+.leftAlign {
+    display: grid;
+    align-items: left;
+    align-content: center;
+}
+
 .rank {
     grid-area: rank;
-    
-    width: 100%;
+    margin: 0 auto;
     display: grid;
     color: orange;
     place-items: center;
 }
 
 .country {
-    width: 100%;
     grid-area: country;
     display: grid;
     place-items: center;
 }
-
-.flag {
-    max-width: 4rem;
+.flag { 
+    max-width: 2.5em;
+    filter: brightness(0.9); 
 }
 
-.name {
+.name   { 
     grid-area: name;
 }
-
-.points {
+.points { 
     grid-area: points;
 }
-
-.speed {
+.speed  { 
     grid-area: speed;
 }
 
+.zIndex1 { z-index: 1 }
 
+.zIndex2 { z-index: 2 }
