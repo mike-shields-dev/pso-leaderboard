@@ -22,7 +22,7 @@ const scoreboardRowTemplate = ({
         `
 
     const country = document.createElement("div")
-    country.className = "bannerItem country"
+    country.className = "centerAlign country"
     
     let flagImg
     const foundCountry = countriesData.find(country => country.name === countryName)
@@ -38,13 +38,13 @@ const scoreboardRowTemplate = ({
         <div class="scoreboardRow">
             <div class="rank">${index + 1}</div>
 
-            <div class="scoreboardRowBanner ${(index % 2) ? 'odd' : 'even'}"></div>
-            <div class="bannerItem country">
+            <div class="zIndex1 scoreboardRowBanner ${(index % 2) ? 'odd' : 'even'}"></div>
+            <div class="zIndex2 centerAlign country">
                 ${ foundCountry ? `<img class="flag" src=${foundCountry.flag} />`: ""}
             </div>
-            <div class="bannerItem name">${firstName} ${initial}</div>
-            <div class="bannerItem points">${points}</div>
-            <div class="bannerItem speed">${mph}</div>
+            <div class="zIndex2 centerAlign name">${firstName} ${initial}</div>
+            <div class="zIndex2 centerAlign points">${points}</div>
+            <div class="zIndex2 centerAlign speed">${mph}</div>
         </div>
     `
     }
