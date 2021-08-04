@@ -1,6 +1,6 @@
 :root {
-    --scoreboard-template-areas: "rank country name points speed ..";
-    --scoreboard-template-columns: 3fr 6fr 20fr 6fr 6fr 3fr;
+    --scoreboard-template-areas:  "rank  name points speed country .....";
+    --scoreboard-template-columns: 6rem 16fr 4fr    4fr   5fr    6rem ;
 }
 
 h1 {
@@ -24,7 +24,7 @@ h2 {
     font-size: 2rem;
     margin: 0 auto;
     width: 95vw;
-    background: rgba(0, 0, 0, 0.175);
+    /* background: rgba(0, 0, 0, 0.175); */
     border-radius: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -60,14 +60,14 @@ h2 {
 
 .scoreboardRow {
     width: 100%;
-    height: 6vh;
+    height: 4rem;
     display: grid;
     grid-template-areas: var(--scoreboard-template-areas);
     grid-template-columns: var(--scoreboard-template-columns);
 }
 
 .scoreboardRowBanner {
-    grid-area: country / country / country / speed;
+    grid-area: name / name / name / country;
     
     transform: skew(var(--positiveSkew));
     border-radius: 0.5rem;
@@ -93,12 +93,31 @@ h2 {
     align-content: center;
 }
 
+.leftPadding {
+    padding-left: 2rem;
+}
+
 .rank {
     grid-area: rank;
-    margin: 0 auto;
+    font-size: 1.25rem;
     display: grid;
-    color: orange;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "rank";
     place-items: center;
+}
+
+.rankStar {
+    padding: 0;
+    width: 3rem;
+    grid-area: rank;
+}
+
+.rankValue {
+    grid-area: rank;
+    display: grid;
+    place-items: center;
+    transform: translateY(5%);
 }
 
 .country {
@@ -107,7 +126,7 @@ h2 {
     place-items: center;
 }
 .flag { 
-    max-width: 2.5em;
+    max-width: 4rem;
     filter: brightness(0.9); 
 }
 
