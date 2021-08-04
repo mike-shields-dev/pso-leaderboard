@@ -27,18 +27,18 @@
         <input id="firstNameInput" name="firstName" type="text" required/>
         
         <label class="initialLabel" for="initialInput">Initial: </label>
-        <input id="initialInput" name="initial" type="text" maxlength="1"/>
+        <input id="initialInput" name="initial" type="text" maxlength="1" required/>
         
         <label class="countryLabel" for="countrySelect">Nationality: </label>
         <select id="countrySelect" name="countryName" required>
             <option value="">-- Choose a country --</option>
         </select>
 
-        <label class="pointsLabel" for="pointsInput">Score: </label>
+        <label class="pointsLabel" for="pointsInput">Points: </label>
         <input id="pointsInput" name="points" type="number" min="0" max="9999" required/>
         
-        <label class="speedLabel" for="speedInput">Speed: </label>
-        <input id="speedInput" name="speed" type="number" min="0" max="99" required/>
+        <label class="mphLabel" for="mphInput">mph: </label>
+        <input id="mphInput" name="mph" type="number" min="0" max="99" required/>
         
         <div class="bttns">
             <button id="saveBttn" type="submit">Save</button>

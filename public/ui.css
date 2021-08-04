@@ -39,7 +39,7 @@ form {
         "initialLabel   initialInput   initialInput   initialInput   initialInput"    
         "countryLabel   countrySelect  countrySelect  countrySelect  countrySelect"
         "pointsLabel    pointsInput    pointsInput    pointsInput    pointsInput"
-        "speedLabel     speedInput     speedInput     speedInput     speedInput"
+        "mphLabel     mphInput     mphInput     mphInput     mphInput"
         ".....          bttns          bttns          bttns          bttns"
     ;
     gap: 0.75rem;
@@ -81,8 +81,8 @@ select:focus {
 .pointsLabel { grid-area: pointsLabel }
 #pointsInput { grid-area: pointsInput }    
 
-.speedLabel { grid-area: speedLabel }
-#speedInput { grid-area: speedInput }
+.mphLabel { grid-area: mphLabel }
+#mphInput { grid-area: mphInput }
  
 .bttns { 
     grid-area: bttns;

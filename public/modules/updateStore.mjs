@@ -3,13 +3,13 @@ import setStoreItem from './setStoreItem.mjs'
 import formDataToObject from './formDataToObject.mjs' 
 
 const updateStore = formData => {
-    const currentPlayerScores = getStoreItem("playerScores")
+    const currentPlayerScores = getStoreItem("storedScores")
     const newPlayerScore = formDataToObject(formData)
 
     if(currentPlayerScores) {
-        setStoreItem("playerScores", [...currentPlayerScores, newPlayerScore]) 
+        setStoreItem("storedScores", [...currentPlayerScores, newPlayerScore]) 
     } else {
-        setStoreItem("playerScores", [newPlayerScore])
+        setStoreItem("storedScores", [newPlayerScore])
     }
 }
 

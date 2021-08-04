@@ -1,6 +1,6 @@
 :root {
     --scoreboard-template-areas: "rank country name points speed ..";
-    --scoreboard-template-columns: 1.5fr 2.5fr 10fr 4fr 4fr 1fr;
+    --scoreboard-template-columns: 4fr 6fr 20fr 8fr 4fr 4fr;
 }
 
 h1 {
@@ -9,7 +9,6 @@ h1 {
     padding-top: 3rem;
     margin: 0 auto;
     line-height: 0.85;
-    text-shadow: 4px 4px #000000;
 }
 
 h2 {
@@ -17,7 +16,6 @@ h2 {
     margin: 0 auto;
     padding-bottom: 3.5rem;
     text-align: center;
-    text-shadow: 4px 4px #000000;
 }
 
 .scoreboard {
@@ -36,6 +34,7 @@ h2 {
 
 .scoreboardHeaderRankLabel {
     grid-area: rank;
+    color: orange;
     display: grid;
     place-items: center;
 }
@@ -46,13 +45,26 @@ h2 {
     place-items: center;
 }
 
-.scoreboardRowNameLabel { grid-area: name }
-.scoreboardHeaderPointsLabel { grid-area: points }
-.scoreboardHeaderSpeedLabel { grid-area: speed }
+.scoreboardHeaderNameLabel { 
+    grid-area: name;
+    display: grid;
+    place-items: center;  
+}
+
+.scoreboardHeaderPointsLabel { 
+    grid-area: points;
+    display: grid;
+    place-items: center; 
+}
+.scoreboardHeaderSpeedLabel { 
+    grid-area: speed; 
+    display: grid;
+    place-items: center; 
+}
 
 .scoreboardRow {
     width: 100%;
-    height: 8vh;
+    height: 6vh;
     display: grid;
     grid-template-areas: var(--scoreboard-template-areas);
     grid-template-columns: var(--scoreboard-template-columns);
@@ -77,7 +89,7 @@ h2 {
 
 .bannerItem {
     display: grid;
-    align-items: center;
+    place-items: center; 
 }
 .rank {
     grid-area: rank;

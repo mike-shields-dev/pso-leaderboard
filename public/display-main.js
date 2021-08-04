@@ -1,4 +1,4 @@
 import updateScoreBoardDisplay from './modules/updateScoreBoardDisplay.mjs'
 
-window.onload = () => updateScoreBoardDisplay()
-window.onstorage = () => updateScoreBoardDisplay()
+window.addEventListener("load", updateScoreBoardDisplay)
+window.addEventListener("storage", updateScoreBoardDisplay)
