@@ -26,15 +26,9 @@ There were certain requirements that the application needed to meet:
 - Display the content in a visually appealing way, that will hopefully improve the visitor experience and entice more visitors to play the game.
 
 ### Local Storage API
-\
+
 As the data set would never be very large & only text based, I decided that I would use the Local Storage API. This would allow persistance of data without the need to use an external or locally running server. 
 
 This also had the benefit of being accessible from multiple tabs and/or instances of the same browser on the same computer.
 
-This may prove to be inadequate later on though, as the data is not completely invulnerable to deletion or corruption by various unintended means. A real life test of the application will be needed to determine this.  
-
-### Broadcast Channel API
-\
-In order to update the leaderboard display, some kind of data update notification event was needed. At first I thought about using websockets but after some research I came across the Broadcast Channel API.
-
-This API (like the Local Storage API) allows data to be passed between both browser tabs & instances via "broadcast channels" where data can be sent and recieved as part of message object. 
+This may prove to be inadequate later on, as the data is not completely invulnerable to deletion or corruption by various unintended means. A real life test of the application will be needed to determine this. 
