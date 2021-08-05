@@ -1,3 +1,8 @@
+// This file registers C:\\pso-leaderboard\\server.js,
+// as a Window Service.
+// Please visit https://www.npmjs.com/package/node-windows
+// for more information.
+
 const Service = require('node-windows').Service;
  
 const svc = new Service({
