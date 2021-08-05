@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "test",
+    "test": "no tests configured",
     "start": "node server.js"
   },
   "repository": {
@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/nfmdevelopers/pso-leaderboard/issues"
   },
-  "homepage": "https://github.com/nfmdevelopers/pso-leaderboard#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.12"
-  }
+  "homepage": "https://github.com/nfmdevelopers/pso-leaderboard#readme"
 }
