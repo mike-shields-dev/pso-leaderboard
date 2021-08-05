@@ -12,7 +12,8 @@ createServer(function(req, res){
         ext === "json" ? "application/json" :
         ext === "css"  ? "text/css" :
         ext === "png"  ? "image/png" : 
-        ext === "ico"  ? "image/x-icon" : "text";
+        ext === "ico"  ? "image/x-icon" : 
+        ext === "svg"  ? "image/svg+xml" : "text";
 
 
         fs.readFile(`public${pathname}`, function (err, html) {

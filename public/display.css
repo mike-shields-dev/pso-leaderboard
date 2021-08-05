@@ -8,14 +8,6 @@ h1 {
     text-align: center;
     padding-top: 1rem;
     margin: 0 auto;
-    line-height: 0.95;
-}
-
-h2 {
-    font-size: 4rem;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    text-align: center;
 }
 
 .scoreboard {
@@ -26,7 +18,7 @@ h2 {
     width: 95vw;
     /* background: rgba(0, 0, 0, 0.175); */
     border-radius: 1rem;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -60,7 +52,7 @@ h2 {
 
 .scoreboardRow {
     width: 100%;
-    height: 7vh;
+    height: 6.5vh;
     display: grid;
     grid-template-areas: var(--scoreboard-template-areas);
     grid-template-columns: var(--scoreboard-template-columns);
