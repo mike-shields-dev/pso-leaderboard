@@ -69,8 +69,8 @@ h2 {
 .scoreboardRowBanner {
     grid-area: name / name / name / country;
     
-    transform: skew(var(--positiveSkew));
-    border-radius: 0.5rem;
+    /* transform: skew(var(--positiveSkew)); */
+    border-radius: 5rem;
     border: 1px solid rgba(105, 158, 255, 0.212);
 }
 
