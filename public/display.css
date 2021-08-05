@@ -60,7 +60,7 @@ h2 {
 
 .scoreboardRow {
     width: 100%;
-    height: 4rem;
+    height: 7vh;
     display: grid;
     grid-template-areas: var(--scoreboard-template-areas);
     grid-template-columns: var(--scoreboard-template-columns);
