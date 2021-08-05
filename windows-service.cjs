@@ -1,6 +1,5 @@
 const Service = require('node-windows').Service;
  
-// Create a new service object
 const svc = new Service({
   name:'PSO Leaderboard',
   description: 'The PSO Leaderboard localhost server',
