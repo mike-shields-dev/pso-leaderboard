@@ -43,7 +43,7 @@ const scoreboardRowTemplate = ({
             <div class="zIndex1 scoreboardRowBanner ${(index % 2) ? 'odd' : 'even'}"></div>
             <div class="zIndex2 centerAlign country">
                 ${foundCountry ? `
-                    <img class="flag" src="./assets/images/flags/${foundCountry.flag.split("/").slice(-1)}" />` : ""
+                    <img class="flag" src="${foundCountry.flag}" />` : ""
                 }
             </div>
             <div class="zIndex2 centerAlign points">${points}</div>
