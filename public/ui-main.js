@@ -1,3 +1,5 @@
+// This is the root script for ui.html
+
 import updateStore from './modules/updateStore.mjs'
 import deleteLastEntry from './modules/deleteLastEntry.mjs'
 import clearStore from './modules/clearStore.mjs'

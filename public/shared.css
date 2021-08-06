@@ -1,3 +1,7 @@
+/* 
+Shared CSS for both display.html and ui.html
+*/
+
 :root {
     --skewAmount: 15deg;
     --positiveSkew: calc(var(--skewAmount) * -1);

@@ -1,6 +1,11 @@
-// This file registers C:\\pso-leaderboard\\server.js,
+// When this file is run by nodejs, 
+// it registers C:\\pso-leaderboard\\server.js,
 // as a Window Service.
-// Please visit https://www.npmjs.com/package/node-windows
+// nodejs, and the package node-windows,
+// will need to be installed before trying to run this file.
+ 
+// Please refer to the file `INSTALLATION.md` or 
+// visit https://www.npmjs.com/package/node-windows
 // for more information.
 
 const Service = require('node-windows').Service;
