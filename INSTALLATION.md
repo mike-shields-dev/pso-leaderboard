@@ -28,8 +28,6 @@ dir
 
 This command will list all of the sub directories at the root of the C: drive. A directory with a name of `pso-leaderboard` should be listed. 
 
-Once the repo has been cloned to the host machine and providing that the CLI is still at the root of the C: drive, use the following command to navigate the CLI into the project's directory. 
-
 ##Installing Node.js and NPM
 
 Node is a server side "runtime" for JavaScript, it allows JavaScript to access system features that client/browser side JavaScript cannot. 
@@ -59,4 +57,10 @@ Once this is done, `server.js` should be started automatically on boot up of com
 
 Visit https://www.npmjs.com/package/node-windows for details of how to do set this up. 
 
-The file `windows-service.cjs` can be found in the project folder and is already configured.
+Once `node-windows` is set up. Make sure the CLI is in the project directory `'C:/pso-leaderboard/'` register `server.js` using Node to execute the file `windows-service.cjs` by running this command in the CLI.
+
+```
+node windows-service.cjs
+```
+
+To check that the service has been registered, 
