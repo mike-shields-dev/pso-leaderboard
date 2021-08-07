@@ -5468,6 +5468,10 @@ const countriesData = [
         "cioc": "ESA"
     },
     {
+        "name": "England",
+        "flag": "./assets/images/flags/gb-eng.svg"
+    }
+    {
         "name": "Equatorial Guinea",
         "topLevelDomain": [
             ".gq"
