@@ -15426,6 +15426,10 @@ const countriesData = [
         "cioc": "KSA"
     },
     {
+        "name": "Scotland",
+        "flag": "./assets/images/flags/gb-sct.svg"
+    },
+    {
         "name": "Senegal",
         "topLevelDomain": [
             ".sn"
@@ -19148,6 +19152,10 @@ const countriesData = [
             }
         ],
         "cioc": "VIE"
+    },
+    {
+        "name": "Wales",
+        "flag": "./assets/images/flags/gb-wls.svg"
     },
     {
         "name": "Wallis and Futuna",
