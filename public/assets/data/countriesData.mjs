@@ -5470,7 +5470,7 @@ const countriesData = [
     {
         "name": "England",
         "flag": "./assets/images/flags/gb-eng.svg"
-    }
+    },
     {
         "name": "Equatorial Guinea",
         "topLevelDomain": [
