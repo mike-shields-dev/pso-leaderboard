@@ -6,7 +6,7 @@ import clearStore from './modules/clearStore.mjs'
 import capitalizeEachWord from './modules/capitalizeWords.mjs'
 import appendCountryOptions from './modules/appendCountryOptions.mjs'
 
-window.addEventListener("load", appendCountryOptions)
+window.addEventListener("DOMContentLoaded", appendCountryOptions)
 
 document
     .querySelector("form")

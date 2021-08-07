@@ -34,7 +34,7 @@ form {
     display: grid;
     justify-content: flex-start;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
         "firstNameLabel firstNameInput firstNameInput firstNameInput firstNameInput"  
