@@ -27,7 +27,7 @@ h1 {
     padding: 0;
     margin-bottom: 0;
     margin-top: 1rem;
-    width: 30rem;
+    width: 100vw;
 }
 
 form {
@@ -35,6 +35,7 @@ form {
     justify-content: flex-start;
     margin: 0 auto;
     padding: 0;
+    font-size: 1.75rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
         "firstNameLabel firstNameInput firstNameInput firstNameInput firstNameInput"  
@@ -49,7 +50,7 @@ form {
 
 label {
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 label:focus {
@@ -58,7 +59,7 @@ label:focus {
 
 input, 
 select {
-    font-size: 1rem;
+    font-size: 1em;
     padding: 0.25rem 0.5rem;
     background: #e6e6e6;
     border: none;
@@ -99,7 +100,7 @@ button {
     border-radius: 0.33rem;
     padding: 0.75rem;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1em;
     color: #252525;
     min-width: 33%;
 }
