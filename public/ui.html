@@ -24,21 +24,21 @@
 
     <form>
         <label class="firstNameLabel" for="firstNameInput">First Name(s): </label>
-        <input id="firstNameInput" name="firstName" type="text" required/>
+        <input id="firstNameInput" name="firstName" type="text" required autocomplete="off"/>
         
         <label class="initialLabel" for="initialInput">Initial: </label>
-        <input id="initialInput" name="initial" type="text" maxlength="1" required/>
+        <input id="initialInput" name="initial" type="text" maxlength="1" required autocomplete="off"/>
         
         <label class="countryLabel" for="countrySelect">Nationality: </label>
-        <select id="countrySelect" name="countryName" required>
+        <select id="countrySelect" name="countryName" required autocomplete="off">
             <option value="">-- Choose a country --</option>
         </select>
 
         <label class="pointsLabel" for="pointsInput">Points: </label>
-        <input id="pointsInput" name="points" type="number" min="0" max="9999" required/>
+        <input id="pointsInput" name="points" type="number" min="0" max="9999" required autocomplete="off"/>
         
         <label class="mphLabel" for="mphInput">mph: </label>
-        <input id="mphInput" name="mph" type="number" min="0" max="99" required/>
+        <input id="mphInput" name="mph" type="number" min="0" max="99" required autocomplete="off"/>
         
         <div class="bttns">
             <button id="saveBttn" type="submit">Save</button>

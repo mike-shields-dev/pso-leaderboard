@@ -23,7 +23,7 @@ img {
 
 h1 { 
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 0;
     margin-bottom: 0;
     margin-top: 1rem;
@@ -35,7 +35,7 @@ form {
     justify-content: flex-start;
     margin: 0 auto;
     padding: 0;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
         "firstNameLabel firstNameInput firstNameInput firstNameInput firstNameInput"  
