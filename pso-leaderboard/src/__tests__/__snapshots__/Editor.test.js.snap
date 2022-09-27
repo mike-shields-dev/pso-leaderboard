@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Editor matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <p>
+      Editor
+    </p>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      href="/display"
+    >
+      Display
+    </a>
+  </div>
+</DocumentFragment>
+`;
